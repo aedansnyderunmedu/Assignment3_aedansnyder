@@ -10,7 +10,7 @@ typedef struct _my_array Array;
 
 void output_array(Array *arr);
 void shift_array(Array *arr);
-Array *average_adjacent(Array *arr);
+Array *avg_adj(Array *arr);
 //function prototypes. ouput and shift are void because they return nothing.everything is done with pointers. average_adjacent builds an entirely new array struct with updated values.
 
 
