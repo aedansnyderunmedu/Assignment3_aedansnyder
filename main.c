@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) //argc counts args, *argv is an array of pointe
 	//Casting with type Array using (Array *). Same as a void cast (Void *).
 	for(int i = 0; i < arr->size; i++)
 	{
-		arr->data[i] = i * 1.5; //fills every index with a new value. could use any operand here. 
+		arr->data[i] = (i * 0.0) + (i + 1); //fills every index with a new value. could use any operand here. I'm setting each index equal to 0 and adding 1 per value. 
 	}
 	output_array(arr); //array is created. output_array prints it to screen. 
 	shift_array(arr); //calling shift_array on Array.

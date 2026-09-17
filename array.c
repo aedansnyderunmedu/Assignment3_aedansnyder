@@ -7,7 +7,7 @@ void output_array(Array *arr)
 	printf("Array size: %d\n", arr->size);
 	for(int i = 0; i < arr->size; i++)
 	{
-		printf("%f", arr->data[i]);
+		printf("[%.3f]", arr->data[i]);
 	}
 	printf("\n");
 	//catches trailing line. arr->size points to the size field in our custom struct for loop count. 
@@ -15,7 +15,7 @@ void output_array(Array *arr)
 void shift_array(Array *arr)
 {
 	double fIndex = arr->data[0];//copies FIRST index value for final swap.
-	for(int i = 0; i < arr->size - 1; i++)
+	for(int i = 0; i < arr->size-1; i++)
 	{
 		arr->data[i] = arr->data[i + 1];
 	}
