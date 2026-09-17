@@ -15,7 +15,9 @@ int main(int argc, char *argv[]) //argc counts args, *argv is an array of pointe
 			printf("Error; enter positive, nonzero integer values only!\n");
 			return 1;
 		}
-	Array *arr = (Array *)malloc(sizeof(Array));
+	Array *arr = (Array *)malloc(sizeof(Array)); //initial malloc for typedef struct "Array"
+	arr->size=size; //field SIZE set to SIZE
+	arr->data = (double *)malloc(size * sizeof(double)); //field DATA allocated enough memory for each index/value of SIZE (determined by user at runtime)
 	//Casting with type Array using (Array *). Same as a void cast (Void *).
 	for(int i = 0; i < arr->size; i++)
 	{
