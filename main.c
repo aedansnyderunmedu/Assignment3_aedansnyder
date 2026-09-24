@@ -23,11 +23,17 @@ int main(int argc, char *argv[]) //argc counts args, *argv is an array of pointe
 	{
 		arr->data[i] = (i * 0.0) + (i + 1); //fills every index with a new value. could use any operand here. I'm setting each index equal to 0 and adding 1 per value. 
 	}
+	
+	printf("Primary Array:\n");
 	output_array(arr); //array is created. output_array prints it to screen. 
-	shift_array(arr); //calling shift_array on Array.
-	output_array(arr); //running output again to verify shift.
+	//shift_array(arr); //calling shift_array on Array. "DEPRECATED. Changed order of function calls because original order was taking adjacent average of SHIFTED array."
+	//output_array(arr); //running output again to verify shift.
 
 	Array *avg = avg_adj(arr);//pointer type Array fed to avg_adj function. Avg adj will return it. 
+	shift_array(arr);
+	printf("Shifted Array:\n");
+	output_array(arr);
+	printf("Average Adjacent Array:\n");
 	output_array(avg); //output array called again to display brand new, half-sized Array. 
 	
 	free(arr->data); //call frees inside ---> outside so program knows what to free, when. 
